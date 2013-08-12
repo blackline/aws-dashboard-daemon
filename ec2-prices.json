@@ -1,0 +1,16 @@
+{
+   "on-demand":{
+      "t1.micro":0.020,
+      "m1.small":0.060,
+      "m1.medium":0.120,
+      "m1.large":0.240,
+      "m1.xlarge":0.480,
+      "m3.xlarge":0.500,
+      "m3.2xlarge":1.000,
+      "m2.xlarge":0.410,
+      "m2.2xlarge":0.820,
+      "m2.4xlarge":1.640,
+      "c1.medium":0.145,
+      "c1.xlarge":0.580
+   }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "aws-dashboard-daemon",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "async": "*",
+    "aws-sdk": "*",
+    "firebase": "*"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm":  "1.2.x"
+  }
+}
