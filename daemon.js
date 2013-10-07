@@ -1,8 +1,9 @@
 var aws = require('aws-sdk'),
     firebase = require('firebase'),
     async = require('async'),
-    ec2Prices = require('./ec2-prices.json'),
-    rdsPrices = require('./rds-prices.json'),
+    ec2Prices = require('./pricing/ec2.json'),
+    rdsPrices = require('./pricing/rds.json'),
+    elasticachePrices = require('./pricing/elasticache.json'),
     HOURS_PER_MONTH = 720;
 
 var daemon = function (firebase) {
@@ -10,6 +11,7 @@ var daemon = function (firebase) {
         firebase: firebase,
         instances: [],
         ec2: new aws.EC2(),
+        elasticache: new aws.ElastiCache(),
         rds: new aws.RDS()
     };
 
@@ -40,6 +42,25 @@ var daemon = function (firebase) {
 
                         locals.instances[instance.Tags.Name] = instance;
                     }
+                }
+
+                callback();
+            });
+        },
+        function (callback) {
+            // Get a list of all elasticache instances
+            console.log("Describing Elasticache instances");
+            locals.elasticache.describeCacheClusters(null, function (err, data) {
+                if (err) return callback(err);
+
+                for (var d in data.CacheClusters) {
+                    var instance = data.CacheClusters[d];
+                    instance.id = data.CacheClusters[d].CacheClusterId;
+
+                    var cost = elasticachePrices['on-demand'][instance.CacheNodeType];
+                    instance.cost = Math.ceil(cost * HOURS_PER_MONTH * instance.NumCacheNodes);
+
+                    locals.instances[instance.id] = instance;
                 }
 
                 callback();
