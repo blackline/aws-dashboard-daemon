@@ -1,22 +1,32 @@
 {
    "standard":{
-      "db.t1.micro":0.025,
-      "db.m1.small":0.080,
-      "db.m1.medium":0.160,
-      "db.m1.large":0.320,
-      "db.m1.xlarge":0.640,
-      "db.m2.xlarge":0.555,
-      "db.m2.2xlarge":1.110,
-      "db.m2.4xlarge":2.215
+      "db.t1.micro": 0.025,
+      "db.m3.medium": 0.150,
+      "db.m3.large": 0.300,
+      "db.m3.xlarge": 0.600,
+      "db.m3.2xlarge": 1.195,
+      "db.m1.small": 0.080,
+      "db.m1.medium": 0.160,
+      "db.m1.large": 0.320,
+      "db.m1.xlarge": 0.640,
+      "db.m2.xlarge": 0.555,
+      "db.m2.2xlarge": 1.110,
+      "db.m2.4xlarge": 2.215,
+      "db.cr1.8xl": 4.725
    },
    "multi-az":{
-      "db.t1.micro":0.065,
-      "db.m1.small":0.135,
-      "db.m1.medium":0.275,
-      "db.m1.large":0.545,
-      "db.m1.xlarge":1.090,
-      "db.m2.xlarge":0.945,
-      "db.m2.2xlarge":1.890,
-      "db.m2.4xlarge":3.770
+      "db.t1.micro": 0.050,
+      "db.m3.medium":  0.255,
+      "db.m3.large": 0.510,
+      "db.m3.xlarge":  1.020,
+      "db.m3.2xlarge": 2.035,
+      "db.m1.small": 0.135,
+      "db.m1.medium":  0.275,
+      "db.m1.large": 0.545,
+      "db.m1.xlarge":  1.090,
+      "db.m2.xlarge":  0.945,
+      "db.m2.2xlarge": 1.890,
+      "db.m2.4xlarge": 3.770,
+      "db.cr1.8xl": 8.035
    }
 }

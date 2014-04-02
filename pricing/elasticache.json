@@ -1,15 +1,15 @@
 {
     "on-demand":{
         "cache.t1.micro": 0.022,
-        "cache.m1.small": 0.075,
-        "cache.m1.medium": 0.155,
-        "cache.m1.large": 0.310,
-        "cache.m1.xlarge": 0.620,
-        "cache.m2.xlarge": 0.505,
-        "cache.m2.2xlarge": 1.010,
-        "cache.m2.4xlarge": 2.020,
-        "cache.m3.xlarge": 0.653,
-        "cache.m3.2xlarge": 1.305,
-        "cache.c1.xlarge": 0.740
+        "cache.m1.small": 0.055,
+        "cache.m1.medium": 0.112,
+        "cache.m1.large": 0.226,
+        "cache.m1.xlarge": 0.453,
+        "cache.m2.xlarge": 0.302,
+        "cache.m2.2xlarge": 0.604,
+        "cache.m2.4xlarge": 1.207,
+        "cache.m3.xlarge": 0.364,
+        "cache.m3.2xlarge": 0.728,
+        "cache.c1.xlarge": 0.663
     }
 }
